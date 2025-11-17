@@ -1,0 +1,10 @@
+---
+- name: Ejecución completa del TP
+  hosts: localhost
+  become: yes
+
+  roles:
+    - 2PRecuperatorio
+    - Crea_Carpetas_Nardi
+    - Cambia_Propiedad_Nardi
+    - Sudoers_Nardi

@@ -1,0 +1,22 @@
+---
+  - name: Crear grupos del recuperatorio
+    ansible.builtin.group:
+      name: "{{ item }}"
+      state: present
+    loop:
+      - GProfesores
+      - GAlumnos
+
+  - name: Crear usuario profesor
+    ansible.builtin.user:
+      name: profesor
+      groups: GProfesores
+      state: present
+      create_home: yes
+
+  - name: Crear usuario alumno
+    ansible.builtin.user:
+      name: alumno
+      groups: GAlumnos
+      state: present
+      create_home: yes

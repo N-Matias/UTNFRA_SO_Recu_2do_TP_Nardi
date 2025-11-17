@@ -1,0 +1,21 @@
+---
+- name: Crear carpeta /UTN
+  become: yes
+  file:
+    path: /UTN
+    state: directory
+    mode: '0755'
+
+- name: Crear carpeta /UTN/Profesor
+  become: yes
+  file:
+    path: /UTN/Profesor
+    state: directory
+    mode: '0755'
+
+- name: Crear carpeta /UTN/Alumno
+  become: yes
+  file:
+    path: /UTN/Alumno
+    state: directory
+    mode: '0755'

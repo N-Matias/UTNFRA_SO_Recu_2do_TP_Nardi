@@ -1,0 +1,103 @@
+2025-11-17 17:24:07,471 p=2406 u=vagrant n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2025-11-17 17:24:07,479 p=2406 u=vagrant n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2025-11-17 17:24:07,641 p=2406 u=vagrant n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  but found another document
+
+The error appears to be in '/home/vagrant/UTN-FRA_SO_Examenes/202411/ansible/playbook.yml': line 11, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+        msg: "Despues de la ejecucion del rol"
+---
+^ here
+
+2025-11-17 17:31:11,759 p=2410 u=vagrant n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2025-11-17 17:31:11,764 p=2410 u=vagrant n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2025-11-17 17:31:11,867 p=2410 u=vagrant n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  but found another document
+
+The error appears to be in '/home/vagrant/UTN-FRA_SO_Examenes/202411/ansible/roles/2PRecuperatorio/tasks/main.yml': line 8, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+---
+^ here
+
+2025-11-17 17:45:35,380 p=2418 u=vagrant n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2025-11-17 17:45:35,383 p=2418 u=vagrant n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2025-11-17 17:45:35,607 p=2418 u=vagrant n=ansible | PLAY [Ejecución completa del TP] ***********************************************************************************************
+2025-11-17 17:45:35,607 p=2418 u=vagrant n=ansible | skipping: no hosts matched
+2025-11-17 17:45:35,608 p=2418 u=vagrant n=ansible | PLAY RECAP *********************************************************************************************************************
+2025-11-17 17:48:19,906 p=2424 u=vagrant n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2025-11-17 17:48:19,911 p=2424 u=vagrant n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2025-11-17 17:48:20,035 p=2424 u=vagrant n=ansible | PLAY [Ejecución completa del TP] ***********************************************************************************************
+2025-11-17 17:48:20,073 p=2424 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************************************************************
+2025-11-17 17:48:21,393 p=2424 u=vagrant n=ansible | ok: [localhost]
+2025-11-17 17:48:21,405 p=2424 u=vagrant n=ansible | TASK [2PRecuperatorio : Crear grupos del recuperatorio] ************************************************************************
+2025-11-17 17:48:21,745 p=2424 u=vagrant n=ansible | changed: [localhost] => (item=GProfesores)
+2025-11-17 17:48:21,974 p=2424 u=vagrant n=ansible | changed: [localhost] => (item=GAlumnos)
+2025-11-17 17:48:21,980 p=2424 u=vagrant n=ansible | TASK [2PRecuperatorio : Crear usuario profesor] ********************************************************************************
+2025-11-17 17:48:22,376 p=2424 u=vagrant n=ansible | changed: [localhost]
+2025-11-17 17:48:22,382 p=2424 u=vagrant n=ansible | TASK [2PRecuperatorio : Crear usuario alumno] **********************************************************************************
+2025-11-17 17:48:22,668 p=2424 u=vagrant n=ansible | changed: [localhost]
+2025-11-17 17:48:22,676 p=2424 u=vagrant n=ansible | TASK [Crea_Carpetas_Nardi : Crear carpeta /UTN] ********************************************************************************
+2025-11-17 17:48:22,941 p=2424 u=vagrant n=ansible | changed: [localhost]
+2025-11-17 17:48:22,948 p=2424 u=vagrant n=ansible | TASK [Crea_Carpetas_Nardi : Crear carpeta /UTN/Profesor] ***********************************************************************
+2025-11-17 17:48:23,133 p=2424 u=vagrant n=ansible | changed: [localhost]
+2025-11-17 17:48:23,139 p=2424 u=vagrant n=ansible | TASK [Crea_Carpetas_Nardi : Crear carpeta /UTN/Alumno] *************************************************************************
+2025-11-17 17:48:23,335 p=2424 u=vagrant n=ansible | changed: [localhost]
+2025-11-17 17:48:23,341 p=2424 u=vagrant n=ansible | TASK [Cambia_Propiedad_Nardi : Cambiar propietario de /UTN/Profesor] ***********************************************************
+2025-11-17 17:48:23,556 p=2424 u=vagrant n=ansible | changed: [localhost]
+2025-11-17 17:48:23,563 p=2424 u=vagrant n=ansible | TASK [Cambia_Propiedad_Nardi : Cambiar propietario de /UTN/Alumno] *************************************************************
+2025-11-17 17:48:23,757 p=2424 u=vagrant n=ansible | changed: [localhost]
+2025-11-17 17:48:23,764 p=2424 u=vagrant n=ansible | TASK [Sudoers_Nardi : Agregar grupo GProfesores a sudoers sin password] ********************************************************
+2025-11-17 17:48:24,017 p=2424 u=vagrant n=ansible | fatal: [localhost]: FAILED! => {"changed": false, "msg": "Destination /etc/sudoers.d/nardi does not exist !", "rc": 257}
+2025-11-17 17:48:24,019 p=2424 u=vagrant n=ansible | PLAY RECAP *********************************************************************************************************************
+2025-11-17 17:48:24,020 p=2424 u=vagrant n=ansible | localhost                  : ok=9    changed=8    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-11-17 17:51:18,942 p=2833 u=vagrant n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2025-11-17 17:51:18,946 p=2833 u=vagrant n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2025-11-17 17:51:19,066 p=2833 u=vagrant n=ansible | PLAY [Ejecución completa del TP] ***********************************************************************************************
+2025-11-17 17:51:19,076 p=2833 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************************************************************
+2025-11-17 17:51:20,100 p=2833 u=vagrant n=ansible | ok: [localhost]
+2025-11-17 17:51:20,112 p=2833 u=vagrant n=ansible | TASK [2PRecuperatorio : Crear grupos del recuperatorio] ************************************************************************
+2025-11-17 17:51:20,404 p=2833 u=vagrant n=ansible | ok: [localhost] => (item=GProfesores)
+2025-11-17 17:51:20,579 p=2833 u=vagrant n=ansible | ok: [localhost] => (item=GAlumnos)
+2025-11-17 17:51:20,586 p=2833 u=vagrant n=ansible | TASK [2PRecuperatorio : Crear usuario profesor] ********************************************************************************
+2025-11-17 17:51:20,979 p=2833 u=vagrant n=ansible | ok: [localhost]
+2025-11-17 17:51:20,985 p=2833 u=vagrant n=ansible | TASK [2PRecuperatorio : Crear usuario alumno] **********************************************************************************
+2025-11-17 17:51:21,220 p=2833 u=vagrant n=ansible | ok: [localhost]
+2025-11-17 17:51:21,227 p=2833 u=vagrant n=ansible | TASK [Crea_Carpetas_Nardi : Crear carpeta /UTN] ********************************************************************************
+2025-11-17 17:51:21,512 p=2833 u=vagrant n=ansible | ok: [localhost]
+2025-11-17 17:51:21,519 p=2833 u=vagrant n=ansible | TASK [Crea_Carpetas_Nardi : Crear carpeta /UTN/Profesor] ***********************************************************************
+2025-11-17 17:51:21,719 p=2833 u=vagrant n=ansible | ok: [localhost]
+2025-11-17 17:51:21,724 p=2833 u=vagrant n=ansible | TASK [Crea_Carpetas_Nardi : Crear carpeta /UTN/Alumno] *************************************************************************
+2025-11-17 17:51:21,919 p=2833 u=vagrant n=ansible | ok: [localhost]
+2025-11-17 17:51:21,926 p=2833 u=vagrant n=ansible | TASK [Cambia_Propiedad_Nardi : Cambiar propietario de /UTN/Profesor] ***********************************************************
+2025-11-17 17:51:22,120 p=2833 u=vagrant n=ansible | ok: [localhost]
+2025-11-17 17:51:22,128 p=2833 u=vagrant n=ansible | TASK [Cambia_Propiedad_Nardi : Cambiar propietario de /UTN/Alumno] *************************************************************
+2025-11-17 17:51:22,323 p=2833 u=vagrant n=ansible | ok: [localhost]
+2025-11-17 17:51:22,329 p=2833 u=vagrant n=ansible | TASK [Sudoers_Nardi : Crear archivo sudoers para Nardi] ************************************************************************
+2025-11-17 17:51:22,533 p=2833 u=vagrant n=ansible | changed: [localhost]
+2025-11-17 17:51:22,540 p=2833 u=vagrant n=ansible | TASK [Sudoers_Nardi : Agregar grupo GProfesores a sudoers sin password] ********************************************************
+2025-11-17 17:51:22,800 p=2833 u=vagrant n=ansible | changed: [localhost]
+2025-11-17 17:51:22,814 p=2833 u=vagrant n=ansible | PLAY RECAP *********************************************************************************************************************
+2025-11-17 17:51:22,815 p=2833 u=vagrant n=ansible | localhost                  : ok=11   changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

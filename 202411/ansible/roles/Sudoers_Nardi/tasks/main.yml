@@ -1,0 +1,14 @@
+---
+- name: Crear archivo sudoers para Nardi
+  file:
+    path: /etc/sudoers.d/nardi
+    state: touch
+    mode: '0440'
+
+- name: Agregar grupo GProfesores a sudoers sin password
+  become: yes
+  lineinfile:
+    path: /etc/sudoers.d/nardi
+    line: "%GProfesores ALL=(ALL) NOPASSWD: ALL"
+    state: present
+    validate: /usr/sbin/visudo -cf %s

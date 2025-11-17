@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+    web:
+      image: nardimatias/web2-nardi:latest  
+      ports:
+        - "81:80"
+      volumes:
+        - ./web/file:/usr/share/nginx/html/file

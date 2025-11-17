@@ -1,0 +1,16 @@
+---
+- name: Cambiar propietario de /UTN/Profesor
+  become: yes
+  file:
+    path: /UTN/Profesor
+    owner: profesor
+    group: GProfesores
+    state: directory
+
+- name: Cambiar propietario de /UTN/Alumno
+  become: yes
+  file:
+    path: /UTN/Alumno
+    owner: alumno
+    group: GAlumnos
+    state: directory

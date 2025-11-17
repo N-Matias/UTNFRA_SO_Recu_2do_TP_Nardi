@@ -1,0 +1,6 @@
+#####################################
+# Nombre de usuario: vagrant
+# ID: 1000
+# Hash: $y$j9T$QFX7isk/636nf3hXt2pYu1$bOCKdhY5ZvPChgEG8UXRz1yl/MxocELXgFuysJTWn53 
+#####################################
+
